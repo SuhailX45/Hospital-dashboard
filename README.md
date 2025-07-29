@@ -16,10 +16,10 @@ Automated Financials: Calculate commissions, totals, and breakdowns at a glance.
 Inventory Overview: Monitor medical stock, reorder levels, expiry, and vendor information.
 Tech Stack
 
-Frontend: Modern web stack (recommended: React.js, Vue.js, or Angular)
+Frontend: power bi 
 
 Backend: MySQL (using advanced SQL Views from provided scripts)
-APIs: RESTful API integration recommended for connecting frontend with database
+APIs: RESTfulPower bi recommended for connecting frontend with database
 
 Database Schema & Views
 Predefined SQL Views
@@ -28,9 +28,7 @@ Provided in /mysql.sql file (see attachment):
 medical_stock_info
 
 Joins medicine stock with supplier details for inventory snapshots.
-
 hospital_patient_details
-
 Aggregates patient, doctor, surgery, bed, room, billing, and satisfaction info in one comprehensive view.
 
 Note: Ensure all referenced tables (patient, doctor, beds, hospital_bills, etc.) exist with necessary columns/constraints.
@@ -45,18 +43,6 @@ Validate all required base tables exist and are populated.
 
 2. Frontend Setup (Sample: React)
 Clone your repo
-
-Install dependencies:
-
-bash
-npm install
-Configure API endpoints to connect with your backend/MySQL database.
-
-Run locally:
-
-bash
-npm start
-Note: Adjust and secure your backend APIs as needed for production.
 
 Usage Guide
 Login: Authenticate as a doctor, admin, or staff.
