@@ -1,90 +1,48 @@
-# Hospital-dashboard
-Project Overview
-The Hospital Doctor Dashboard is a powerful tool designed to simplify hospital operations, combining real-time visualization for doctors, patients, billing, and appointments. It is fully integrated with a robust backend based on MySQL views for medical, staff, and financial management.
-
+Hospital Dashboard Project
+Overview
+This project is a comprehensive hospital management dashboard designed to streamline patient, doctor, and financial data. It includes multiple dashboards for patients, finance, doctors, and an overview, along with a MySQL database schema to manage the data efficiently.
 Features
-1. Doctor Dashboard
-Doctor Profiles: View doctor details, specializations, availability, ratings, and manage schedules.
-Appointment Management: List all upcoming appointments for seamless workflow.
-Patient Monitoring: See real-time patient status (admitted/discharged) alongside financials.
-Commission & Billing Analytics: Track doctor-wise commission, total bills, and financial performance.
-Graphical Widgets: Interactive graphs, sliders, and tables for quick insights.
 
-2. Patient, Financial, and Stock Insights
-Patient Tracking: Comprehensive patient records including status, gender, admission/discharge dates, and billing.
-Automated Financials: Calculate commissions, totals, and breakdowns at a glance.
-Inventory Overview: Monitor medical stock, reorder levels, expiry, and vendor information.
-Tech Stack
+Patient Dashboard: Displays patient details, admission/discharge status, surgery information, and feedback.
+Finance Dashboard: Tracks estimated patient amounts, medicine sales, doctor/staff salaries, and stock status.
+Doctor Dashboard: Manages doctor availability, qualifications, commissions, and patient appointments.
+Overview Dashboard: Provides a high-level view of patient discharges, stock, ratings, and sales targets.
+Information Dashboard: Categorizes patients by age, tracks surgery details, and monitors staff and bed occupancy.
+MySQL Views: Includes pre-defined views for medical stock information and integrated patient-doctor-surgery-billing details.
 
-Frontend: power bi 
+Installation
 
-Backend: MySQL (using advanced SQL Views from provided scripts)
-APIs: RESTfulPower bi recommended for connecting frontend with database
+Clone the repository:git clone https://github.com/SuhailX45/hospital-dashboard.git
 
-Database Schema & Views
-Predefined SQL Views
-Provided in /mysql.sql file (see attachment):
 
-medical_stock_info
+Navigate to the project directory:cd hospital-dashboard
 
-Joins medicine stock with supplier details for inventory snapshots.
-hospital_patient_details
-Aggregates patient, doctor, surgery, bed, room, billing, and satisfaction info in one comprehensive view.
 
-Note: Ensure all referenced tables (patient, doctor, beds, hospital_bills, etc.) exist with necessary columns/constraints.
+Set up the MySQL database:
+Install MySQL on your system.
+Create a new database and import the provided SQL views.
 
-Installation & Setup
-1. Database Setup
-Import the SQL views from the mysql.sql file into your MySQL database:
 
-bash
-mysql -u username -p hospital_db < mysql.sql
-Validate all required base tables exist and are populated.
+Configure the application (if applicable) with your database credentials.
 
-2. Frontend Setup (Sample: React)
-Clone your repo
+Usage
 
-Usage Guide
-Login: Authenticate as a doctor, admin, or staff.
+Access the dashboards through the provided interface.
+Use the MySQL views to query and manage hospital data efficiently.
+Update the SQL views as needed to reflect changes in the database schema.
 
-Doctor List: Browse doctors, filter by specialization or name, and check status.
+Database Schema
 
-Appointments: See and schedule patient visits; upcoming appointments are displayed in an organized format.
+The project includes two main MySQL views:
+medical_stock_info: Combines medical stock and supplier details.
+hospital_patient_details: Integrates patient, doctor, bed, room, surgery, and billing information.
 
-Patient Records: Track patient status, billing, and live bed occupancy.
 
-Financial Analytics: Instantly analyze earnings, commission rates, and hospital revenue.
-
-Stock Management: Use the inventory view for monitoring low stock and upcoming expiries.
-
-Customization & Extensions
-Add custom charts for department-wise analytics or historical patient trends.
-
-Integrate with hospital notification/email systems for automated alerts.
-
-Extend database views to include additional business logic (insurance, custom billing, or audit logs).
-
-Implement role-based access control for enhanced security.
-
-Best Practices
-Data Security: Apply access controls at both the database and application levels.
-
-Performance: Index key columns; optimize SQL for large datasets.
-
-Data Accuracy: Implement validation on entry and regular audits.
-
-Scalability: Modularize frontend and backend for easy scaling.
 
 Contributing
-Fork the repository and open pull requests for improvements or bug fixes.
-
-Suggest new features or report bugs via the issue tracker.
-
+Feel free to fork this repository and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
 License
-This project is open for educational, research, and prototyping purposes. For commercial use, review all third-party dependency licenses.
+This project is licensed under the MIT License - see the LICENSE.md file for details.
+Acknowledgments
 
-Contact
-For implementation help, feedback, or queries:
-
-Email: [mrsuhail052099@gmail.com]
-[Suhail Khan]
+Thanks to the open-source community for MySQL and other tools used in this project.
